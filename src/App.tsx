@@ -40,7 +40,7 @@ type Project = {
 
 const SOCIALS = {
   telegram: "https://t.me/aldyzzxy",
-  github: "https://github.com/KingAldy",
+  github: "https://github.com/",
   instagram: "https://instagram.com/dyyforyous",
   linkedin: "https://linkedin.com/in/bayu-rizky-aldiano-9944lett",
   email: "mailto:tubulyubul@gmail.com",
@@ -749,13 +749,12 @@ export default function App() {
                         "VS Code",
                         "Git",
                         "Github",
-                        "Figma",
                         "Vite",
+                        "React",
                         "npm",
                         "Vercel",
                         "Netlify",
                         "Postman",
-                        "ESLint",
                       ].map((tool, i) => (
                         <motion.div
                           key={tool}
@@ -772,7 +771,7 @@ export default function App() {
 
                     <div className="mt-10 grid gap-4 sm:grid-cols-3">
                       {[
-                        { value: "10+", label: "Projects" },
+                        { value: "1+", label: "Projects" },
                         { value: "1+", label: "Tahun Coding" },
                         { value: "5+", label: "Tech Stack" },
                       ].map((stat) => (
@@ -801,12 +800,9 @@ export default function App() {
                           "Python",
                           "GSAP",
                           "Node.js",
-                          "HTML5",
+                          "HTML",
                           "JavaScript",
                           "REST API",
-                          "Three.js",
-                          "CSS3",
-                          "Figma",
                         ].map((item, i) => (
                           <span key={`${row}-${item}-${i}`} className="shrink-0">
                             {item}
