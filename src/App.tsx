@@ -681,7 +681,7 @@ export default function App() {
                       <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/15 blur-[90px]" />
                       <div className="relative">
                         <div className="text-6xl font-black italic tracking-tight text-white drop-shadow-[0_8px_30px_rgba(255,255,255,0.08)] md:text-7xl">
-                          Adit
+                          Bayu
                         </div>
                         <div className="mt-2 text-sm uppercase tracking-[0.38em] text-white/25">
                           Developer identity card
@@ -714,7 +714,7 @@ export default function App() {
 
                     <div className="mt-8 grid gap-4 md:grid-cols-2">
                       {[
-                        { icon: User, label: "Nama", value: "Adit Kusuma" },
+                        { icon: User, label: "Nama", value: "Bayu Rizky" },
                         { icon: CalendarDays, label: "Umur", value: "15 Tahun" },
                         { icon: User, label: "Gender", value: "Male" },
                         { icon: GraduationCap, label: "Pendidikan", value: "Pelajar" },
@@ -952,7 +952,7 @@ export default function App() {
             <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 md:flex-row">
               <div className="flex items-center gap-2">
                 <div className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-white/55">
-                  Adit Kusuma
+                  Bayu Rizky
                 </div>
               </div>
               <div>© {year} Bayu Rizky • Built with React, TypeScript & GSAP vibes.</div>
