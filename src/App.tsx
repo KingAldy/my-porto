@@ -20,6 +20,7 @@ import {
   CalendarDays,
   GraduationCap,
   ExternalLink,
+  Linkedin,
 } from "lucide-react";
 
 type SkillBar = {
@@ -41,73 +42,38 @@ const SOCIALS = {
   telegram: "https://t.me/aldyzzxy",
   github: "https://github.com/KingAldy",
   instagram: "https://instagram.com/dyyforyous",
+  linkedin: "https://linkedin.com/in/bayu-rizky-aldiano-9944lett",
   email: "mailto:tubulyubul@gmail.com",
 };
 
 const skillBars: SkillBar[] = [
-  { name: "JavaScript", level: 88, color: "from-yellow-300 to-amber-500" },
+  { name: "JavaScript", level: 90, color: "from-yellow-300 to-amber-500" },
   { name: "TypeScript", level: 78, color: "from-sky-400 to-blue-500" },
-  { name: "React", level: 82, color: "from-cyan-300 to-sky-500" },
-  { name: "HTML5", level: 96, color: "from-orange-400 to-red-500" },
-  { name: "CSS3", level: 90, color: "from-blue-400 to-indigo-500" },
+  { name: "React", level: 80, color: "from-cyan-300 to-sky-500" },
+  { name: "HTML", level: 85, color: "from-orange-400 to-red-500" },
+  { name: "CSS", level: 86, color: "from-blue-400 to-indigo-500" },
   { name: "TailwindCSS", level: 86, color: "from-cyan-300 to-teal-400" },
-  { name: "Python", level: 69, color: "from-indigo-300 to-blue-600" },
-  { name: "GSAP", level: 63, color: "from-lime-300 to-green-500" },
+  { name: "Python", level: 70, color: "from-indigo-300 to-blue-600" },
+  { name: "Shell / Linux", level: 75, color: "from-lime-300 to-green-500" },
 ];
 
 const projects: Project[] = [
   {
+    year: "2025",
+    title: "AldyVerse Music",
+    description:
+      "Website musik personal menggunakan Spotify API — browse lagu, playlist, dan artist favoritmu dengan tampilan yang fresh dan modern.",
+    tags: ["React", "Spotify API", "TypeScript", "TailwindCSS"],
+    accent: "from-green-400/70 to-emerald-500/60",
+    href: "#",
+  },
+  {
     year: "2024",
     title: "Portfolio Website",
     description:
-      "Website portfolio pribadi dengan React, TypeScript, motion effect, dan visual neon gelap yang elegan.",
-    tags: ["React", "TypeScript", "Three.js", "GSAP"],
+      "Website portfolio pribadi dengan React, TypeScript, motion effect, dan visual neon gelap yang elegan. Ini yang lagi kamu lihat!",
+    tags: ["React", "TypeScript", "Framer Motion", "TailwindCSS"],
     accent: "from-violet-400/70 to-fuchsia-500/60",
-    href: "#",
-  },
-  {
-    year: "2024",
-    title: "To-Do App",
-    description:
-      "Aplikasi manajemen tugas drag & drop dengan filter, dark mode, dan UX yang simpel tapi modern.",
-    tags: ["React", "JavaScript", "TailwindCSS"],
-    accent: "from-violet-500/70 to-blue-500/60",
-    href: "#",
-  },
-  {
-    year: "2024",
-    title: "Landing Page Sekolah",
-    description:
-      "Landing page modern untuk acara sekolah dengan animasi halus dan layout yang rapi untuk mobile maupun desktop.",
-    tags: ["HTML5", "CSS3", "JavaScript", "GSAP"],
-    accent: "from-cyan-400/70 to-sky-500/60",
-    href: "#",
-  },
-  {
-    year: "2023",
-    title: "Weather App",
-    description:
-      "Aplikasi cuaca real-time dengan integrasi API dan UI card-based yang clean dan mudah dipakai.",
-    tags: ["React", "API", "TailwindCSS"],
-    accent: "from-pink-400/70 to-fuchsia-500/60",
-    href: "#",
-  },
-  {
-    year: "2023",
-    title: "Python Calculator",
-    description:
-      "Kalkulator desktop Python untuk operasi dasar sampai kalkulasi tertentu dengan tampilan yang sederhana.",
-    tags: ["Python", "Tkinter"],
-    accent: "from-sky-400/70 to-indigo-500/60",
-    href: "#",
-  },
-  {
-    year: "2023",
-    title: "Quiz App",
-    description:
-      "Aplikasi kuis interaktif dengan score, timer, dan pengalaman belajar yang lebih engaging.",
-    tags: ["JavaScript", "HTML5", "CSS3"],
-    accent: "from-lime-300/70 to-green-500/60",
     href: "#",
   },
 ];
@@ -201,13 +167,13 @@ function Preloader({ done }: { done: () => void }) {
           transition={{ delay: 0.08, duration: 0.65 }}
           className="text-4xl font-black tracking-tight text-white md:text-7xl"
         >
-          Welcome To My Portofolio
+          Welcome To My Porotofolio
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.22, duration: 0.55 }}
+          transition={{ delay: 0.22, duration: 1.1 }}
           className="mt-4 text-xs uppercase tracking-[0.38em] text-white/45"
         >
           Loading experience...
@@ -292,8 +258,8 @@ function Navbar() {
   ] as const;
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-5 z-50 px-4">
-      <div className="mx-auto flex max-w-7xl justify-center lg:justify-between">
+    <div className="pointer-events-none fixed inset-x-0 top-4 z-50 px-3 sm:top-5 sm:px-4">
+  <div className="mx-auto flex max-w-7xl justify-center lg:justify-between">
         <motion.div
           initial={{ y: -28, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -309,44 +275,44 @@ function Navbar() {
           </a>
         </motion.div>
 
-        <motion.nav
-          initial={{ y: -28, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.55, delay: 0.06 }}
-          className="pointer-events-auto flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1.5 shadow-[0_8px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl"
-        >
-          {items.map(([label, id]) => {
-            const active = activeSection === id;
-            return (
-              <a
-                key={id}
-                href={`#${id}`}
-                className="relative rounded-full px-4 py-2 text-sm text-white/65 transition hover:text-white md:px-5"
-              >
-                {active && (
-                  <motion.span
-                    layoutId="active-nav-pill"
-                    className="absolute inset-0 rounded-full border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-[0_0_20px_rgba(139,92,246,0.22)]"
-                    transition={{ type: "spring", stiffness: 280, damping: 24 }}
-                  />
-                )}
-                <span className={cn("relative z-10", active && "text-white")}>
-                  {label}
-                </span>
-              </a>
-            );
-          })}
+<motion.nav
+  initial={{ y: -28, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.55, delay: 0.06 }}
+  className="pointer-events-auto flex max-w-full items-center gap-1 overflow-x-auto whitespace-nowrap rounded-full border border-white/10 bg-white/[0.04] p-1.5 shadow-[0_8px_40px_rgba(0,0,0,0.35)] backdrop-blur-xl [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+>
+  {items.map(([label, id]) => {
+    const active = activeSection === id;
+    return (
+      <a
+        key={id}
+        href={`#${id}`}
+        className="relative shrink-0 rounded-full px-3 py-2 text-xs text-white/65 transition hover:text-white sm:px-4 sm:text-sm md:px-5"
+      >
+        {active && (
+          <motion.span
+            layoutId="active-nav-pill"
+            className="absolute inset-0 rounded-full border border-white/10 bg-gradient-to-b from-white/10 to-white/5 shadow-[0_0_20px_rgba(139,92,246,0.22)]"
+            transition={{ type: "spring", stiffness: 280, damping: 24 }}
+          />
+        )}
+        <span className={cn("relative z-10", active && "text-white")}>
+          {label}
+        </span>
+      </a>
+    );
+  })}
 
-          <a
-            href={SOCIALS.telegram}
-            target="_blank"
-            rel="noreferrer"
-            className="ml-1 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-400/90 to-indigo-300 px-4 py-2 text-sm font-semibold text-[#0c0c12] shadow-[0_0_30px_rgba(139,92,246,0.35)] transition hover:brightness-110"
-          >
-            Hire Me
-            <ArrowUpRight size={16} />
-          </a>
-        </motion.nav>
+  <a
+    href={SOCIALS.telegram}
+    target="_blank"
+    rel="noreferrer"
+    className="ml-1 hidden shrink-0 items-center gap-2 rounded-full bg-gradient-to-r from-violet-400/90 to-indigo-300 px-4 py-2 text-sm font-semibold text-[#0c0c12] shadow-[0_0_30px_rgba(139,92,246,0.35)] transition hover:brightness-110 sm:inline-flex"
+  >
+    Hire Me
+    <ArrowUpRight size={16} />
+  </a>
+</motion.nav>
       </div>
     </div>
   );
@@ -932,9 +898,20 @@ export default function App() {
                       <Instagram className="mx-auto text-white/70" size={20} />
                       <div className="mt-4 text-sm text-white/80">Instagram</div>
                     </a>
+                  
+                  <a
+                      href={SOCIALS.linkedin}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-[1.5rem] border border-blue-400/15 bg-gradient-to-b from-blue-500/10 to-blue-400/5 px-4 py-5 shadow-[0_0_30px_rgba(59,130,246,0.12)] transition hover:brightness-110"
+                    >
+                      <Linkedin className="mx-auto text-blue-400" size={20} />
+                      <div className="mt-3 text-sm text-white/90">LinkedIn</div>
+                    </a>
                   </div>
 
-                  <div className="mt-10">
+                  <div className="mt-8 sm:mt-10">
+                  
                     <a
                       href={SOCIALS.email}
                       className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-violet-400 to-indigo-300 px-7 py-4 text-sm font-bold text-[#0d0c13] shadow-[0_0_40px_rgba(139,92,246,0.38)] transition hover:brightness-110"
