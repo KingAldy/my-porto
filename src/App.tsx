@@ -201,7 +201,7 @@ function Preloader({ done }: { done: () => void }) {
           transition={{ delay: 0.08, duration: 0.65 }}
           className="text-4xl font-black tracking-tight text-white md:text-7xl"
         >
-          Welcome To
+          Welcome To My Portofolio
         </motion.h1>
 
         <motion.p
