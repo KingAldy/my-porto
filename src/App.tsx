@@ -32,12 +32,19 @@ interface Skill {
 // --- Components ---
 
 const Preloader = ({ onComplete }: { onComplete: () => void }) => {
+  useEffect(() => {
+    // Auto complete after 2.5 seconds
+    const timer = setTimeout(() => {
+      onComplete();
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, [onComplete]);
+
   return (
     <motion.div
       initial={{ opacity: 1 }}
       exit={{ opacity: 0, y: -100 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
-      onAnimationComplete={() => onComplete()}
       className="fixed inset-0 z-[100] bg-brand-dark flex items-center justify-center"
     >
       <div className="text-center">
@@ -49,13 +56,14 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
         >
           Welcome to <span className="text-brand-blue glow-text">My Portofolio</span>
         </motion.h1>
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "100%" }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="h-1 bg-brand-blue mx-auto rounded-full shadow-[0_0_10px_rgba(0,210,255,0.8)]"
-          style={{ maxWidth: '200px' }}
-        />
+        <div className="w-full max-w-[200px] mx-auto h-1 bg-white/10 rounded-full overflow-hidden">
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            className="h-full bg-brand-blue shadow-[0_0_10px_rgba(0,210,255,0.8)]"
+          />
+        </div>
       </div>
     </motion.div>
   );
@@ -74,6 +82,7 @@ const Navbar = () => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
+          // Check if section is in view
           return rect.top <= 150 && rect.bottom >= 150;
         }
         return false;
@@ -253,8 +262,8 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
-      <AnimatePresence>
-        {loading && <Preloader onComplete={() => setLoading(false)} />}
+      <AnimatePresence mode="wait">
+        {loading && <Preloader key="preloader" onComplete={() => setLoading(false)} />}
       </AnimatePresence>
 
       {/* Background Elements */}
@@ -264,7 +273,11 @@ export default function App() {
       </div>
 
       {!loading && (
-        <>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <Navbar />
 
           <main>
@@ -274,7 +287,7 @@ export default function App() {
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
                 >
                   <h2 className="text-brand-blue font-semibold tracking-widest uppercase text-sm mb-4">Available for Projects</h2>
                   <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -299,7 +312,7 @@ export default function App() {
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1, ease: "easeOut" }}
+                  transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
                   className="relative hidden lg:block perspective-[1000px]"
                 >
                   <TiltCard>
@@ -353,7 +366,7 @@ export default function App() {
                       />
                     </div>
                     <div className="absolute -bottom-10 -right-10 glass-card p-8 rounded-2xl hidden md:block">
-                      <div className="text-4xl font-bold text-brand-blue">3+</div>
+                      <div className="text-4xl font-bold text-brand-blue">1+</div>
                       <div className="text-sm text-white/60">Years of Experience</div>
                     </div>
                   </motion.div>
@@ -430,7 +443,7 @@ export default function App() {
                   </a>
                   <a href="https://t.me/aldyzzxy" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10">
                     <Send className="text-brand-blue" />
-                    <span>t.me/aldyzzxy</span>
+                    <span></span>
                   </a>
                 </div>
 
@@ -452,7 +465,7 @@ export default function App() {
               <p className="mt-2">Built with React, Tailwind & Passion.</p>
             </div>
           </footer>
-        </>
+        </motion.div>
       )}
     </div>
   );
