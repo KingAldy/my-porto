@@ -39,8 +39,8 @@ type Project = {
 
 const SOCIALS = {
   telegram: "https://t.me/aldyzzxy",
-  github: "https://github.com/",
-  instagram: "https://instagram.com/",
+  github: "https://github.com/KingAldy",
+  instagram: "https://instagram.com/dyyforyous",
   email: "mailto:tubulyubul@gmail.com",
 };
 
@@ -700,8 +700,8 @@ export default function App() {
                     className="glass rounded-[2rem] p-6 md:p-8"
                   >
                     <p className="text-lg leading-8 text-white/72">
-                      Halo! Saya <span className="font-semibold text-white">Adit Kusuma</span>,
-                      seorang pelajar berusia 15 tahun yang passionate di dunia web
+                      Halo! Saya <span className="font-semibold text-white">Bayu Rizky</span>,
+                      seorang pelajar berusia 15 tahun yang menyukai di dunia web
                       development dan teknologi.
                     </p>
 
@@ -955,7 +955,7 @@ export default function App() {
                   Adit Kusuma
                 </div>
               </div>
-              <div>© {year} Adit Kusuma • Built with React, TypeScript & GSAP vibes.</div>
+              <div>© {year} Bayu Rizky • Built with React, TypeScript & GSAP vibes.</div>
               <div className="text-white/45">• Available for hire</div>
             </div>
           </footer>
