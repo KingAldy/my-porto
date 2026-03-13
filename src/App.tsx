@@ -305,7 +305,7 @@ function Navbar() {
             className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-3 text-sm text-white/90 backdrop-blur-xl"
           >
             <Code2 size={16} className="text-violet-300" />
-            <span className="font-semibold">Adit</span>
+            <span className="font-semibold">Bayu</span>
           </a>
         </motion.div>
 
@@ -576,9 +576,9 @@ export default function App() {
                       transition={{ delay: 0.08, duration: 0.65 }}
                       className="text-6xl font-black leading-[0.88] tracking-tight md:text-[9rem]"
                     >
-                      <span className="block text-white">Adit</span>
+                      <span className="block text-white">Bayu</span>
                       <span className="block bg-gradient-to-b from-white/35 via-violet-100/18 to-white/5 bg-clip-text text-transparent">
-                        Kusuma
+                        Rizky
                       </span>
                     </motion.h1>
 
