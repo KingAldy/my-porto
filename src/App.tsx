@@ -694,10 +694,10 @@ export default function App() {
                     className="glass rounded-[2rem] p-6 md:p-8"
                   >
                     <p className="text-lg leading-8 text-white/72">
-                      Halo! Saya <span className="font-semibold text-white">Bayu Rizky</span>,
-                      seorang pelajar berusia 15 tahun yang menyukai di dunia web
-                      development dan teknologi.
-                    </p>
+  Halo! Saya <span className="font-semibold text-white">Bayu Rizky</span>,
+  seorang pelajar berusia 15 tahun yang menyukai di dunia web
+  development dan teknologi.
+</p>
 
                     <p className="mt-6 text-base leading-8 text-white/48">
                       Meski masih muda, saya terus belajar dan mengembangkan skill
