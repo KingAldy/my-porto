@@ -21,6 +21,11 @@
   }
 }
 
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(12deg); }
+  100% { transform: translateX(200%) rotate(12deg); }
+}
+
 @layer utilities {
   .glass-card {
     @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
