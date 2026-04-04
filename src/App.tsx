@@ -643,17 +643,30 @@ export default function App() {
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_30%,rgba(255,255,255,0.12),transparent_18%),radial-gradient(circle_at_70%_70%,rgba(139,92,246,0.13),transparent_24%)]" />
                     <div className="relative flex aspect-[4/5] items-end overflow-hidden rounded-[1.5rem] bg-gradient-to-br from-[#14131b] via-[#0b0b10] to-[#11111a] p-8">
-                      <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(255,255,255,0.04),transparent_35%,rgba(139,92,246,0.08))]" />
-                      <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/15 blur-[90px]" />
-                      <div className="relative">
-                        <div className="text-6xl font-black italic tracking-tight text-white drop-shadow-[0_8px_30px_rgba(255,255,255,0.08)] md:text-7xl">
-                          Bayu
-                        </div>
-                        <div className="mt-2 text-sm uppercase tracking-[0.38em] text-white/25">
-                          Developer identity card
-                        </div>
-                      </div>
-                    </div>
+  
+  <img
+    src="https://files.catbox.moe/x8tx0k.jpg"
+    alt="Bayu"
+    className="absolute inset-0 w-full h-full object-cover z-0"
+  />
+
+  <div className="absolute inset-0 bg-black/30 z-10" />
+
+  <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(255,255,255,0.04),transparent_35%,rgba(139,92,246,0.08))] z-10" />
+  <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/15 blur-[90px] z-10" />
+
+  <div className="relative z-20">
+    <div className="text-6xl font-black italic tracking-tight text-white md:text-7xl">
+      Bayu
+    </div>
+    <div className="mt-2 text-sm uppercase tracking-[0.38em] text-white/25">
+      Developer identity card
+    </div>
+  </div>
+
+</div>
+                    
+                    
                   </motion.div>
                 </div>
 
