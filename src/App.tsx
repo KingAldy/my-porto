@@ -655,7 +655,7 @@ export default function App() {
   <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(255,255,255,0.04),transparent_35%,rgba(139,92,246,0.08))] z-10" />
   <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/15 blur-[90px] z-10" />
 
-  <div className="relative z-20">
+<div className="relative z-20 inline-block rounded-2xl bg-white/10 backdrop-blur-xl px-6 py-4 border border-white/20 shadow-lg">
     <div className="text-6xl font-black italic tracking-tight text-white md:text-7xl">
       Bayu
     </div>
