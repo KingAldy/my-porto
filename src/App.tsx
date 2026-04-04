@@ -656,18 +656,25 @@ export default function App() {
 
 <div className="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/15 blur-[100px] z-10" />
 
-<div className="relative z-20 inline-block rounded-[2rem] bg-white/[0.06] backdrop-blur-md px-8 py-6 border border-white/15 shadow-[0_8px_30px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.2)]">
+<div className="relative z-20 inline-block rounded-[2rem] bg-white/[0.06] backdrop-blur-md px-8 py-6 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.2)] overflow-hidden">
 
-  {/* subtle highlight */}
+  {/* glass highlight */}
   <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 via-transparent to-transparent" />
 
-  <div className="relative text-6xl font-extrabold italic tracking-tight text-white md:text-7xl">
+  {/* shine effect */}
+  <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-[2rem]">
+    <div className="absolute -left-1/2 top-0 h-full w-1/2 rotate-12 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-30 blur-xl animate-[shine_6s_linear_infinite]" />
+  </div>
+
+  {/* TEXT */}
+  <div className="relative text-6xl font-extrabold italic tracking-tight bg-gradient-to-br from-white via-white to-white/70 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(0,0,0,0.6)] md:text-7xl">
     Bayu
   </div>
 
   <div className="relative mt-3 text-[11px] uppercase tracking-[0.45em] text-white/50">
     Developer identity card
   </div>
+
 </div>
 </div>
                     
