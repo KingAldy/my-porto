@@ -650,16 +650,31 @@ export default function App() {
     className="absolute inset-0 w-full h-full object-cover z-0"
   />
 
-  <div className="absolute inset-0 bg-black/30 z-10" />
+  <div className="absolute inset-0 bg-black/50 z-10" />
 
   <div className="absolute inset-0 bg-[linear-gradient(to_bottom_right,rgba(255,255,255,0.04),transparent_35%,rgba(139,92,246,0.08))] z-10" />
   <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/15 blur-[90px] z-10" />
 
-<div className="relative z-20 inline-block rounded-2xl bg-white/10 backdrop-blur-xl px-6 py-4 border border-white/20 shadow-lg">
-    <div className="text-6xl font-black italic tracking-tight text-white md:text-7xl">
+<div className="relative z-20 inline-block px-6 py-4 rounded-[1.5rem] overflow-hidden">
+
+  {/* liquid highlight */}
+  <div className="absolute -top-10 -left-10 w-32 h-32 bg-white/20 rounded-full blur-2xl opacity-40" />
+
+  {/* blur kaca */}
+  <div className="absolute inset-0 backdrop-blur-sm bg-white/[0.08]" />
+
+  {/* cahaya liquid */}
+  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-white/5 to-transparent opacity-40" />
+
+  {/* border kaca */}
+  <div className="absolute inset-0 rounded-[1.5rem] border border-white/15 shadow-[inset_0_1px_1px_rgba(255,255,255,0.25)]" />
+
+  {/* TEXT */}
+  <div className="relative">
+    <div className="text-6xl font-black italic tracking-tight text-white md:text-7xl drop-shadow-[0_4px_20px_rgba(0,0,0,0.7)]">
       Bayu
     </div>
-    <div className="mt-2 text-sm uppercase tracking-[0.38em] text-white/25">
+    <div className="mt-2 text-sm uppercase tracking-[0.38em] text-white/70">
       Developer identity card
     </div>
   </div>
