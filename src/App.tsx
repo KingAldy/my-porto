@@ -650,26 +650,25 @@ export default function App() {
     className="absolute inset-0 w-full h-full object-cover z-0"
   />
 
-<div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] z-10" />
+<div className="absolute inset-0 bg-black/20 z-10" />
 
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.08),transparent_40%),linear-gradient(to_bottom_right,rgba(255,255,255,0.06),transparent_35%,rgba(139,92,246,0.12))] z-10" />
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.05),transparent_45%),linear-gradient(to_bottom_right,transparent,rgba(139,92,246,0.08))] z-10" />
 
-<div className="absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/20 blur-[120px] z-10" />
+<div className="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/15 blur-[100px] z-10" />
 
-<div className="relative z-20 inline-block rounded-[2rem] bg-white/[0.08] backdrop-blur-2xl px-8 py-6 border border-white/20 shadow-[0_8px_40px_rgba(0,0,0,0.45),inset_0_1px_1px_rgba(255,255,255,0.25)]">
-  
-  {/* glass highlight */}
-  <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/20 via-white/5 to-transparent opacity-60" />
+<div className="relative z-20 inline-block rounded-[2rem] bg-white/[0.06] backdrop-blur-md px-8 py-6 border border-white/15 shadow-[0_8px_30px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.2)]">
+
+  {/* subtle highlight */}
+  <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 via-transparent to-transparent" />
 
   <div className="relative text-6xl font-extrabold italic tracking-tight text-white md:text-7xl">
     Bayu
   </div>
 
-  <div className="relative mt-3 text-[11px] uppercase tracking-[0.45em] text-white/40">
+  <div className="relative mt-3 text-[11px] uppercase tracking-[0.45em] text-white/50">
     Developer identity card
   </div>
 </div>
-
 </div>
                     
                     
